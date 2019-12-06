@@ -2,6 +2,7 @@ package interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import pojo.Admin;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,11 +13,11 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
         System.out.println("LoginInterceptor>>>>>preHandle");
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
-        if (user != null) {
+        Admin admin = (Admin) session.getAttribute("Admin");
+        if (admin != null) {
             return true;
         }
-        response.sendRedirect("loginPage.action");
+        response.sendRedirect("login.action");
         return false;
     }
 
