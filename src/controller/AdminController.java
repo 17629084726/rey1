@@ -16,10 +16,10 @@ import javax.servlet.http.HttpSession;
 public class AdminController {
     @Autowired
     HttpServletRequest request;
-    @RequestMapping("/login.action")
-    @ResponseBody
-    public String login(@RequestBody Admin admin){
-        HttpSession session = request.getSession();
-        Admin loginAdmin = AdminDao.
-    }
+//    @RequestMapping("/login.action")
+//    @ResponseBody
+//    public String login(@RequestBody Admin admin){
+//        HttpSession session = request.getSession();
+//        Admin loginAdmin = AdminDao.
+//    }
 }
